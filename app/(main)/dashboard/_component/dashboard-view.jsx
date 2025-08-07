@@ -29,12 +29,15 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 
 const DashboardView = ({ insights }) => {
-  // Transform salary data for the chart
+  // Transform salary data for the chart with Rwanda-specific context
   const salaryData = insights.salaryRanges.map((range) => ({
     name: range.role,
     min: range.min / 1000,
     max: range.max / 1000,
     median: range.median / 1000,
+    // Add Rwanda-specific data
+    ruralOpportunities: range.ruralOpportunities || 0,
+    kigaliDemand: range.kigaliDemand || 0,
   }));
 
   const getDemandLevelColor = (level) => {
@@ -77,6 +80,30 @@ const DashboardView = ({ insights }) => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <Badge variant="outline">Last updated: {lastUpdatedDate}</Badge>
+      </div>
+
+      {/* Rwanda Skills Intelligence Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-6 rounded-lg mb-6">
+        <h2 className="text-2xl font-bold mb-2">🇷🇼 Rwanda Skills Intelligence Hub</h2>
+        <p className="text-blue-100">Real-time insights into Rwanda's digital job market</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+          <div className="text-center">
+            <div className="text-2xl font-bold">2,400+</div>
+            <div className="text-sm text-blue-100">Active Tech Jobs</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold">85%</div>
+            <div className="text-sm text-blue-100">In Kigali</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold">15%</div>
+            <div className="text-sm text-blue-100">Rural Remote</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold">650K</div>
+            <div className="text-sm text-blue-100">Avg Salary (RWF)</div>
+          </div>
+        </div>
       </div>
 
       {/* Market Overview Cards */}

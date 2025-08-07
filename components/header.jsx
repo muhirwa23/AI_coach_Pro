@@ -82,6 +82,26 @@ export default async function Header() {
                     Interview Prep
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/interview/live-practice" className="flex items-center gap-2">
+                    🎤
+                    Live AI Interview
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/interview/tech-quiz" className="flex items-center gap-2">
+                    🚀
+                    Tech Role Quiz
+                  </Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <Link href="/jobs" className="flex items-center gap-2">
+                    🇷🇼
+                    Rwanda Jobs
+                  </Link>
+                </DropdownMenuItem>
+
               </DropdownMenuContent>
             </DropdownMenu>
           </SignedIn>

@@ -27,6 +27,22 @@ export default function LandingPage() {
     <>
       <div className="grid-background"></div>
 
+      {/* Hackathon Banner */}
+      <section className="w-full py-4 bg-gradient-to-r from-green-600 to-blue-600">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-4 text-white">
+            <Trophy className="h-6 w-6" />
+            <span className="font-semibold">🏆 Hackathon Entry: Bridging Rwanda's Digital Skills Gap with AI</span>
+            <Link href="/dashboard">
+              <Button variant="secondary" size="sm">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <HeroSection />
 

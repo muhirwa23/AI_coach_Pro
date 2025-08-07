@@ -1,10 +1,38 @@
 export const industries = [
   {
+    id: "rwanda-fintech",
+    name: "Rwanda FinTech",
+    subIndustries: [
+      "Mobile Money (MTN MoMo, Airtel Money)",
+      "Digital Banking (Bank of Kigali, Equity Bank)",
+      "Payment Processing (Flutterwave Rwanda)",
+      "Microfinance Technology",
+      "Insurance Technology",
+      "Blockchain for Financial Inclusion",
+    ],
+    localCompanies: ["Bank of Kigali", "Equity Bank", "Flutterwave", "MTN Rwanda"],
+    ruralOpportunities: "High - Mobile money agents needed",
+  },
+  {
+    id: "rwanda-agritech",
+    name: "Rwanda AgriTech",
+    subIndustries: [
+      "Precision Agriculture",
+      "Drone Technology for Farming",
+      "Agricultural Data Analytics",
+      "Supply Chain Management",
+      "Weather Prediction Systems",
+      "Crop Monitoring Technology",
+    ],
+    localCompanies: ["Zipline", "AgriTech Rwanda", "Weather Analytics"],
+    ruralOpportunities: "Very High - Direct rural impact",
+  },
+  {
     id: "tech",
     name: "Technology",
     subIndustries: [
       "Software Development",
-      "IT Services",
+      "IT Services", 
       "Cybersecurity",
       "Cloud Computing",
       "Artificial Intelligence/Machine Learning",
