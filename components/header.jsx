@@ -96,9 +96,35 @@ export default async function Header() {
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
+                  <Link href="/skills-simulator" className="flex items-center gap-2">
+                    🧠
+                    AI Skills Simulator
+                  </Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
                   <Link href="/jobs" className="flex items-center gap-2">
                     🇷🇼
                     Rwanda Jobs
+                  </Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="https://youtub-elearning.vercel.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    📺
+                    YouTube E-Learning
+                  </a>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <Link href="/hackathon-demo" className="flex items-center gap-2 border-t pt-2 mt-2">
+                    <StarsIcon className="h-4 w-4 text-yellow-500" />
+                    <span className="font-semibold text-yellow-600">Hackathon Demo</span>
                   </Link>
                 </DropdownMenuItem>
 

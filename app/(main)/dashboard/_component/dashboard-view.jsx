@@ -211,8 +211,32 @@ const DashboardView = ({ insights }) => {
         </CardContent>
       </Card>
 
-      {/* Industry Trends */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* Learning Resources */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <Card className="bg-gradient-to-r from-red-500 to-pink-500 text-white">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              📺 YouTube E-Learning
+            </CardTitle>
+            <CardDescription className="text-red-100">
+              Transform any YouTube video into an interactive learning experience
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-red-100 mb-4">
+              AI-powered learning model that converts YouTube content into structured lessons with quizzes and assessments.
+            </p>
+            <a 
+              href="https://youtub-elearning.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-red-50 transition-colors"
+            >
+              🚀 Start Learning
+            </a>
+          </CardContent>
+        </Card>
+
         <Card>
           <CardHeader>
             <CardTitle>Key Industry Trends</CardTitle>
@@ -221,11 +245,11 @@ const DashboardView = ({ insights }) => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-4">
-              {insights.keyTrends.map((trend, index) => (
+            <ul className="space-y-3">
+              {insights.keyTrends.slice(0, 4).map((trend, index) => (
                 <li key={index} className="flex items-start space-x-2">
                   <div className="h-2 w-2 mt-2 rounded-full bg-primary" />
-                  <span>{trend}</span>
+                  <span className="text-sm">{trend}</span>
                 </li>
               ))}
             </ul>
